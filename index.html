@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Naomi Ting</title>
+</head>
+<body>
+    <div class="container">
+        <span class="txt static">Haesser Naomi Ting, <br> a third year BSIT student <br>
+        and the embodiment of </span>
+        <span class="txt dynamic">perseverance</span>
+        <ul class="list">
+            <li><a href="">Facebook</a></li>
+            <li><a href="">Instagram</a></li>
+            <li><a href="">LinkedIn</a></li>
+        </ul>
+    </div>
+    <script>
+        const txt = document.querySelector(".dynamic");
+        const textLoad = () => {
+            setTimeout(()=>{
+                txt.textContent = "perseverance.";
+            }, 0)
+            setTimeout(()=>{
+                txt.textContent = "determination.";
+            }, 4000)
+            setTimeout(()=>{
+                txt.textContent = "enthusiasm.";
+            }, 8000)
+        }
+        textLoad();
+        setInterval(textLoad, 12000);
+    </script>
+</body>
+</html>
